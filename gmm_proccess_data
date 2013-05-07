@@ -1,0 +1,23 @@
+#!/bin/bash
+
+rm gmm_data/*.data
+
+for vowel in A I O AO
+	do
+		nsamples=`grep ^"$vowel " formant_data | wc -l`
+		touch gmm_data/$vowel.data
+		#echo n samples, nformants and output dim
+		echo "$nsamples 3" >> gmm_data/$vowel.data
+
+		grep ^"$vowel " formant_data | sed "s/$vowel //g" >> gmm_data/$vowel.data
+	done
+
+for vowel in A I O AO
+	do
+		nsamples=`grep ^"$vowel " formant_data_test | wc -l`
+		touch gmm_data/"$vowel"_test.data
+		#echo n samples, nformants and output dim
+		echo "$nsamples 3" >> gmm_data/"$vowel"_test.data
+
+		grep ^"$vowel " formant_data_test | sed "s/$vowel //g" >> gmm_data/"$vowel"_test.data
+	done

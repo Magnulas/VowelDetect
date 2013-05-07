@@ -1,0 +1,12 @@
+#!/bin/bash
+
+rm formant_data
+touch formant_data
+
+for f in `ls trainingdata`
+	do
+		#echo $f
+		type=`echo $f | grep -o "[A-Za-z]\+[0-9]\+" | grep -o "[A-Za-z]\+"`
+		echo -n "$type " >> formant_data 
+		praat formanter.praat trainingdata/$f >> formant_data
+	done

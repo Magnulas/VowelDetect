@@ -1,0 +1,26 @@
+#!/bin/bash
+
+files=`ls trainingdata/ | grep --regexp [a-zA-Z]*[0-9]*.wav`
+
+rm files_trainingdata.scp
+touch files_trainingdata.scp
+
+echo "#!MLF!#" > phones_trainingdata.mlf
+echo "#!MLF!#" > words_trainingdata.mlf
+
+for l in $files
+  do
+	num=`echo $l | grep -o "[0-9]\+"`
+	type=`echo $l | grep -o "^[a-zA-Z]\+"`
+	echo \"*/$type$num.lab\" >> phones_trainingdata.mlf
+	echo $type >> phones_trainingdata.mlf
+	echo . >> phones_trainingdata.mlf
+
+	echo \"$type$num.lab\" >> words_trainingdata.mlf
+	echo $type >> words_trainingdata.mlf
+	echo . >> words_trainingdata.mlf
+
+	echo recordings/trainingdata/$l >> files_trainingdata.scp
+  done
+
+

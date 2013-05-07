@@ -1,0 +1,6 @@
+run make
+./recordData.out A N M to record M wav files of 100 ms each from mirophone. name files AN.wav A(N+1).wav ... A(M-1).wav
+
+sh trainnewdata.sh to train gaussian mixtures models in folder gmms from the recordings in the folder recordings/trainingdata
+
+sh run.sh to run recognizer and pipe output to Sokoban game

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm nn_data_*
+nsamples=`wc -l formant_data`
+let nsamples=$nsamples/2;
+
+for vowel in A, E, I, O
+	do
+		touch nn_data_$vowel
+		#echo n samples, nformants and output dim
+		echo "$nsamples 2 1" >> nn_data_$vowel
+
+		sed "s/$vowel/1/g" formant_data | sed "s/[A-Z]/-1/g" >> nn_data_$vowel
+	done
