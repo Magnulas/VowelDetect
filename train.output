@@ -1,104 +1,40 @@
-
-mog.avg_log_lhood(X) = -4.231
-
-
-running kmeans optimiser
-
-mog.get_means() = 
-{[0.919 1.135 0.893]}
-mog.get_diag_covs() = 
-{[0.506 0.502 0.502]}
-mog.get_weights() = 
-[1.000]
-
-mog.avg_log_lhood(X) = -1.744
-
-
+Output: gmms/A.gmm
 running ML optimiser
-
 mog.get_means() = 
-{[0.919 1.135 0.893]}
+{[518.673 948.559 2263.064]}
 mog.get_diag_covs() = 
-{[0.011 0.003 0.003]}
+{[13721.365 27027.907 323229.421]}
 mog.get_weights() = 
 [1.000]
 
-mog.avg_log_lhood(X) = 3.698
-
-mog.avg_log_lhood(X) = -4.900
-
-
-running kmeans optimiser
-
-mog.get_means() = 
-{[1.144 1.525 0.798]}
-mog.get_diag_covs() = 
-{[0.503 0.504 0.501]}
-mog.get_weights() = 
-[1.000]
-
-mog.avg_log_lhood(X) = -1.739
-
-
+mog.avg_log_lhood(X) = -20.466
+Output: gmms/AO.gmm
 running ML optimiser
-
 mog.get_means() = 
-{[1.144 1.525 0.798]}
+{[572.817 1053.567 1965.491]}
 mog.get_diag_covs() = 
-{[0.005 0.007 0.002]}
+{[25234.067 174847.292 181920.457]}
 mog.get_weights() = 
 [1.000]
 
-mog.avg_log_lhood(X) = 3.919
-
-mog.avg_log_lhood(X) = -6.002
-
-
-running kmeans optimiser
-
-mog.get_means() = 
-{[0.712 2.176 1.106]}
-mog.get_diag_covs() = 
-{[0.508 0.503 0.502]}
-mog.get_weights() = 
-[1.000]
-
-mog.avg_log_lhood(X) = -1.755
-
-
+mog.avg_log_lhood(X) = -21.416
+Output: gmms/I.gmm
 running ML optimiser
-
 mog.get_means() = 
-{[0.712 2.176 1.106]}
+{[271.744 1297.378 2589.848]}
 mog.get_diag_covs() = 
-{[0.015 0.007 0.003]}
+{[2872.413 628419.098 272099.379]}
 mog.get_weights() = 
 [1.000]
 
-mog.avg_log_lhood(X) = 3.170
-
-mog.avg_log_lhood(X) = -3.779
-
-
-running kmeans optimiser
-
-mog.get_means() = 
-{[0.613 0.917 0.899]}
-mog.get_diag_covs() = 
-{[0.501 0.507 0.501]}
-mog.get_weights() = 
-[1.000]
-
-mog.avg_log_lhood(X) = -1.745
-
-
+mog.avg_log_lhood(X) = -21.171
+Output: gmms/O.gmm
 running ML optimiser
-
 mog.get_means() = 
-{[0.613 0.917 0.899]}
+{[308.897 743.976 2110.101]}
 mog.get_diag_covs() = 
-{[0.002 0.014 0.003]}
+{[1866.186 1611.459 31377.131]}
 mog.get_weights() = 
 [1.000]
 
-mog.avg_log_lhood(X) = 3.944
+mog.avg_log_lhood(X) = -16.892

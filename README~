@@ -8,4 +8,4 @@ sh run.sh to run recognizer and pipe output to Sokoban game
 
 
 //TODO
-More test and training data. Script to evaluate accuarcy. Test different amount of gaussian mixtures and experiment with stuff.
+More test and training data. Script to evaluate accuarcy. Test different amount of gaussian mixtures.
