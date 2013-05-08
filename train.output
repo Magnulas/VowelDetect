@@ -1,40 +1,40 @@
 Output: gmms/A.gmm
 running ML optimiser
 mog.get_means() = 
-{[518.673 948.559 2263.064]}
+{[0.919 1.135 0.893]}
 mog.get_diag_covs() = 
-{[13721.365 27027.907 323229.421]}
+{[0.011 0.003 0.003]}
 mog.get_weights() = 
 [1.000]
 
-mog.avg_log_lhood(X) = -20.466
+mog.avg_log_lhood(X) = 3.698
 Output: gmms/AO.gmm
 running ML optimiser
 mog.get_means() = 
-{[572.817 1053.567 1965.491]}
+{[1.144 1.525 0.798]}
 mog.get_diag_covs() = 
-{[25234.067 174847.292 181920.457]}
+{[0.005 0.007 0.002]}
 mog.get_weights() = 
 [1.000]
 
-mog.avg_log_lhood(X) = -21.416
+mog.avg_log_lhood(X) = 3.919
 Output: gmms/I.gmm
 running ML optimiser
 mog.get_means() = 
-{[271.744 1297.378 2589.848]}
+{[0.712 2.176 1.106]}
 mog.get_diag_covs() = 
-{[2872.413 628419.098 272099.379]}
+{[0.015 0.007 0.003]}
 mog.get_weights() = 
 [1.000]
 
-mog.avg_log_lhood(X) = -21.171
+mog.avg_log_lhood(X) = 3.170
 Output: gmms/O.gmm
 running ML optimiser
 mog.get_means() = 
-{[308.897 743.976 2110.101]}
+{[0.613 0.917 0.899]}
 mog.get_diag_covs() = 
-{[1866.186 1611.459 31377.131]}
+{[0.002 0.014 0.003]}
 mog.get_weights() = 
 [1.000]
 
-mog.avg_log_lhood(X) = -16.892
+mog.avg_log_lhood(X) = 3.944

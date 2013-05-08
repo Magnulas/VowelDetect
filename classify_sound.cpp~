@@ -127,7 +127,7 @@ int main(int argc, char **argv, char **envp)
 								vowel=vowels[j];
 							}
 						}
-						fprintf(stderr, "%s %lf\n", vowel, log10(loglikelihood));
+						fprintf(stderr, "%s %lf\n", vowel, loglikelihood);
 						if(log10(loglikelihood)>probthreashold){
 							fprintf(stdout,"%s %lf %lf %lf\n",vowel, formants[0], formants[1],formants[2]);
 						}
