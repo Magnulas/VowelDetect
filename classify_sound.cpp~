@@ -45,21 +45,21 @@ int main(int argc, char **argv, char **envp)
 	char* vowel;
 	char* lastVowel;
 	const char* gmm_files[] = {"gmms/A.gmm","gmms/AO.gmm","gmms/I.gmm","gmms/O.gmm"}; 
-	MOG_diag gmm[4];
+	MOG_generic gmm[4];
 
 	int j = 0;
 	for(j = 0;j<4;j++){
 		gmm[j].load(gmm_files[j]);
 	}
-
+	/*
 	unsigned int pollSpeedMin = 100000000;
 	unsigned int pollSpeedMax = 900000000;
-
+	
 	struct timespec remaningTime, pollSpeed;
 	pollSpeed.tv_sec = 0;
 	pollSpeed.tv_nsec = pollSpeedMax; 
 	
-	unsigned int poolSpeedDecreaseSpeed = 100000000;
+	unsigned int poolSpeedDecreaseSpeed = 100000000;*/
 	unsigned int targetrate = 16000;
 
 	int recordLengthMilliseconds = 100;
@@ -73,8 +73,8 @@ int main(int argc, char **argv, char **envp)
 	int nBytes = -1;
 	snd_pcm_t* capture_handle = init_audio(targetrate);
 	int dbThreashold = 152;
-	double loglikelihood = 0;	
-	double probthreashold = 0.05;
+	double likelihood = 0;	//Probability density function value
+	double probthreashold = 0.001;  //Probability density function value threashold
 	FILE* rec_file = NULL;
 	snd_pcm_sframes_t available;
 	snd_pcm_sframes_t frames; //signed long
@@ -118,17 +118,17 @@ int main(int argc, char **argv, char **envp)
 						//free(pipeStream);
 						scanf("%lf %lf %lf", &formants[0], &formants[1],&formants[2]);
 
-						loglikelihood = DBL_MIN;
+						likelihood = DBL_MIN;
 	
 						for(j = 0;j<4;j++){
-							double tmp = gmm[j].log_lhood(formants);
-							if(loglikelihood<tmp){
-								loglikelihood = tmp;
+							double tmp = gmm[j].lhood(formants);
+							if(likelihood<tmp){
+								likelihood = tmp;
 								vowel=vowels[j];
 							}
 						}
-						fprintf(stderr, "%s %lf\n", vowel, loglikelihood);
-						if(log10(loglikelihood)>probthreashold){
+						fprintf(stderr, "%s %lf\n", vowel, likelihood);
+						if(likelihood>probthreashold){
 							fprintf(stdout,"%s %lf %lf %lf\n",vowel, formants[0], formants[1],formants[2]);
 						}
 						/* Mean to controll the output speed by decreaseing time between polls when same vowel is sounded twice in a row but buffer audio buffer isn't cleared between each poll so it doesn't work*/

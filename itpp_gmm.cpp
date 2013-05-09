@@ -23,14 +23,14 @@ struct Data{
 
 int main(int argc, char **argv, char **envp)
 {
-	if(argc<3){
-		fprintf(stderr,"Please specify training data and trained gmm output name and test data\n");
+	if(argc<4){
+		fprintf(stderr,"Please specify training data and trained gmm name and the number of mixtuers\n");
 		return 0;
 	} 
-
+	
 	char* trainingdataname = argv[1];
 	char* outputname = argv[2];
-	//char* testdataname = argv[3];
+	int K = atoi(argv[3]); // number of Gaussians
 
 	struct Data* data = readDataFromFile(trainingdataname);
 
@@ -38,8 +38,7 @@ int main(int argc, char **argv, char **envp)
 
 	int N = data->nsamples;	// number of vectors
 	int D = data->pdim;		 // number of dimensions
-	int K = 1;		 // number of Gaussians
-
+	
 	Array<vec> X(N);
 	for (int n = 0;n < N;n++) { X(n).set_size(D); X(n) = 0.0; }
 
@@ -56,7 +55,7 @@ int main(int argc, char **argv, char **envp)
 	// the number of gaussians and dimensions of the model is specified here
 
 	MOG_diag mog(K, D);
-
+	
 	//
 	// find initial parameters via k-means (which are then used as seeds for EM based optimisation)
 

@@ -1,0 +1,12 @@
+
+
+for nmix in 1 2 4 8
+	do
+	./itpp_gmm.out "gmm_data/A.data" "gmms/A.gmm" $nmix > train.output
+	./itpp_gmm.out "gmm_data/AO.data" "gmms/AO.gmm" $nmix >> train.output
+	./itpp_gmm.out "gmm_data/I.data" "gmms/I.gmm" $nmix >> train.output
+	./itpp_gmm.out "gmm_data/O.data" "gmms/O.gmm" $nmix >> train.output
+	echo Number of Mixtures: $nmix
+	./evaluate_testdata.out "gmms/A.gmm" "gmm_data/A_test.data" "gmms/AO.gmm" "gmm_data/AO_test.data" "gmms/I.gmm" "gmm_data/I_test.data" "gmms/O.gmm" "gmm_data/O_test.data"
+	const char* gmm_files[] = {,,,
+	done

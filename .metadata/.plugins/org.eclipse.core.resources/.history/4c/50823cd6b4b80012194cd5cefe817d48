@@ -1,0 +1,38 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+
+public class VowelParser {
+
+
+	public static void main(String args[]) throws IOException, InterruptedException{
+
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		boolean run = true;
+		
+		HashMap<String, String> vowelSignal = new HashMap<String,String>();
+
+		vowelSignal.put("A", "U");
+		vowelSignal.put("O", "D");
+		vowelSignal.put("AO", "L");
+		vowelSignal.put("I", "R");
+		
+		int timeStep = 100;
+		int minOutputSpeed = 100;
+		int maxOutputSpeed = 800; //milliseconds
+		int outputSpeed = maxOutputSpeed;
+		
+		String lastVowel = null;
+		
+		while(run){
+			if(in.ready()){
+				String vowel = in.readLine();
+				long currentTime = System.currentTimeMillis();
+				if(vowelSignal.containsKey(vowel)){
+					System.out.println(vowelSignal.get(vowel));
+				}
+			}
+		}
+	}
+}
