@@ -35,7 +35,7 @@ int main(int argc, char **argv, char **envp)
 	int* buffer;
 	buffer = (int*)malloc(buffsize*sizeof(int));
 	
-	snd_pcm_t* capture_handle = init_audio(targetrate);
+	snd_pcm_t* capture_handle = (snd_pcm_t*)init_audio(targetrate);
 
 	int i;	
 	

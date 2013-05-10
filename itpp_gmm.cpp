@@ -4,22 +4,13 @@
 #include <iostream>
 #include <iomanip>
 #include <ios>
-
+#include "datafile_util.h"
 using std::cout;
 using std::endl;
 using std::fixed;
 using std::setprecision;
 
 using namespace itpp;
-
-struct Data* readDataFromFile(char* filename);
-
-struct Data{
-	float** data;
-	int pdim;
-	int nsamples;
-};
-
 
 int main(int argc, char **argv, char **envp)
 {
@@ -80,28 +71,3 @@ int main(int argc, char **argv, char **envp)
 	return 0;
 }
 
-struct Data* readDataFromFile(char* filename){
-	FILE * f = fopen(filename, "r");
-	//Todo fix multiple dimensions
-	int nsamples = 0;
-	int pdim = 0;
-	fscanf(f, "%d %d\n", &nsamples, &pdim );
-	pdim = 3;
-	float* p = (float*)malloc(sizeof(float)*pdim);
-	int i = 0;
-	float** data = (float**)malloc(sizeof(float*)*nsamples);
-	
-	for(i = 0;i<nsamples;i++){
-		data[i] = (float*) malloc(sizeof(float)*pdim);
-		fscanf(f, "%f %f %f\n", &p[0],&p[1],&p[2]);
-		data[i][0] = p[0];
-		data[i][1] = p[1];
-		data[i][2] = p[2];
-	}	
-
-	struct Data* datastruct = (Data*) malloc(sizeof(Data));
-	datastruct->data=data;
-	datastruct->pdim = pdim;
-	datastruct->nsamples=nsamples;
-	return datastruct;
-}

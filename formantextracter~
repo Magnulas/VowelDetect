@@ -29,4 +29,12 @@ for d in `ls recordings/testdata`
 		praat formanter.praat recordings/testdata/$d/$f >> formant_data_test
 		done
 	done
-
+for f in `ls recordings/testdata`
+	do
+		#echo $f
+		type=`echo $f | grep -o "[A-Za-z]\+[0-9]\+" | grep -o "[A-Za-z]\+"`
+		
+		echo -n "$type " >> formant_data_test
+		praat formanter.praat recordings/testdata/$f >> formant_data_test
+		
+	done

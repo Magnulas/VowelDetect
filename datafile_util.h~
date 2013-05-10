@@ -1,0 +1,2 @@
+struct Data* readDataFromFile(char* filename);
+struct Data;
