@@ -1,1 +1,0 @@
-unbuffer ./classify_sound.out "gmms/A.gmm" "A" "gmms/AO.gmm" "AO" "gmms/I.gmm" "I" "gmms/O.gmm" "O" | java -cp VowelToSokobanSignal/bin/ VowelParser | java -cp Sokoban/bin game.Sokoban Sokoban large.sokoban

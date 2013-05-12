@@ -40,17 +40,24 @@ int main(int argc, char **argv, char **envp)
 		gmm[j].load(gmm_files[j]);
 	}
 
+	int D = gmm[0].get_means()(0).size();
 	int ntotalSamples = 0;
 	int wrongClassifed = 0;
-
+	vec datasample(D);
 	for(int i = 0;i<nGmms;i++){
-				
-		struct Data* data = readDataFromFile(test_data[i]);
+			
+		struct DataMatrix* data = readDataMatrixFromFile(test_data[i]);
+		
 		for(int k=0;k<data->nsamples;k++){
 			double likelihood = DBL_MIN;
 			int index = -1;
 			for(int j = 0;j<nGmms;j++){
-				double tmp = gmm[j].lhood(data->data[k]);
+				for(int d=0;d<D;d++){
+					datasample(d) = data->data[k][d];
+				}
+	
+
+				double tmp = gmm[j].lhood(datasample);
 				if(likelihood<tmp){
 					likelihood = tmp;
 					index=j;

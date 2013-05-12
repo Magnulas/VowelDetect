@@ -23,7 +23,7 @@ int main(int argc, char **argv, char **envp)
 	char* outputname = argv[2];
 	int K = atoi(argv[3]); // number of Gaussians
 
-	struct Data* data = readDataFromFile(trainingdataname);
+	struct DataMatrix* data = readDataMatrixFromFile(trainingdataname);
 
 	bool print_progress = false;
 
@@ -33,7 +33,6 @@ int main(int argc, char **argv, char **envp)
 	Array<vec> X(N);
 	for (int n = 0;n < N;n++) { X(n).set_size(D); X(n) = 0.0; }
 
-	// randomise the order of Gaussians "generating" the vectors
 	for (int n = 0;n < N;n++) {
 		for (int d = 0;d < D;d++) {
 			X(n)(d) = data->data[n][d];

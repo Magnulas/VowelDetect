@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm formant_data
-touch formant_data
+rm formantdata/formant_data
+touch formantdata/formant_data
 
 
 for d in `ls recordings/trainingdata`
@@ -10,8 +10,8 @@ for d in `ls recordings/trainingdata`
 		do
 		type=`echo $f | grep -o "[A-Za-z]\+[0-9]\+" | grep -o "[A-Za-z]\+"`
 		
-		echo -n "$type " >> formant_data 
-		praat formanter.praat recordings/trainingdata/$d/$f >> formant_data
+		echo -n "$type " >> formantdata/formant_data 
+		praat formanter.praat recordings/trainingdata/$d/$f >> formantdata/formant_data
 		done
 	done
 
@@ -25,16 +25,8 @@ for d in `ls recordings/testdata`
 		do
 		type=`echo $f | grep -o "[A-Za-z]\+[0-9]\+" | grep -o "[A-Za-z]\+"`
 		
-		echo -n "$type " >> formant_data_test
-		praat formanter.praat recordings/testdata/$d/$f >> formant_data_test
+		echo -n "$type " >> formantdata/formant_data_test
+		praat formanter.praat recordings/testdata/$d/$f >> formantdata/formant_data_test
 		done
 	done
-for f in `ls recordings/testdata`
-	do
-		#echo $f
-		type=`echo $f | grep -o "[A-Za-z]\+[0-9]\+" | grep -o "[A-Za-z]\+"`
-		
-		echo -n "$type " >> formant_data_test
-		praat formanter.praat recordings/testdata/$f >> formant_data_test
-		
-	done
+

@@ -11,11 +11,35 @@ struct Data* readDataFromFile(char* filename){
 	int nsamples = 0;
 	int pdim = 0;
 	fscanf(f, "%d %d\n", &nsamples, &pdim );
+	float p;
+	float* data = (float*)malloc(sizeof(float)*nsamples*pdim);
+	
+	for(int i = 0;i<nsamples;i++){
+		for(int j = 0;j<pdim;j++){
+			fscanf(f, "%f",&p);
+		//	fprintf(stdout, "%lf ", p);
+			data[pdim*i + j] = p;
+		}
+		//fprintf(stdout, "\n", p);
+	}	
+
+	struct Data* datastruct = (Data*) malloc(sizeof(Data));
+	datastruct->data=data;
+	datastruct->pdim = pdim;
+	datastruct->nsamples=nsamples;
+	return datastruct;
+}
+
+struct DataMatrix* readDataMatrixFromFile(char* filename){
+	FILE * f = fopen(filename, "r");
+	int nsamples = 0;
+	int pdim = 0;
+	fscanf(f, "%d %d\n", &nsamples, &pdim );
 	double p;
 	double** data = (double**)malloc(sizeof(double*)*nsamples);
 	
 	for(int i = 0;i<nsamples;i++){
-		data[i] = (double*) malloc(sizeof(double)*pdim);
+		data[i] = (double*)malloc(sizeof(double)*pdim);
 		for(int j = 0;j<pdim;j++){
 			fscanf(f, "%lf",&p);
 		//	fprintf(stdout, "%lf ", p);
@@ -24,7 +48,7 @@ struct Data* readDataFromFile(char* filename){
 		//fprintf(stdout, "\n", p);
 	}	
 
-	struct Data* datastruct = (Data*) malloc(sizeof(Data));
+	struct DataMatrix* datastruct = (DataMatrix*) malloc(sizeof(DataMatrix));
 	datastruct->data=data;
 	datastruct->pdim = pdim;
 	datastruct->nsamples=nsamples;

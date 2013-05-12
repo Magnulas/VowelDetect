@@ -20,7 +20,7 @@ public class VowelParser {
 
 		int timeStep = 100;
 		int minOutputSpeed = 100;
-		int maxOutputSpeed = 800; //milliseconds
+		int maxOutputSpeed = 500; //milliseconds
 		int outputSpeed = maxOutputSpeed;
 
 		String lastSignal = null;
@@ -34,12 +34,13 @@ public class VowelParser {
 					if(vowelSignal.containsKey(vowel)){ //Check vowel valid
 						String signal = vowelSignal.get(vowel); //Get signal
 						System.out.println(signal); //send signal
+
 						if(signal == lastSignal){ //check if vowel same as last, increase speed of output
 							outputSpeed = Math.min(outputSpeed-timeStep, minOutputSpeed);
 						} else{ //Signal not the same, reset output speed
 							outputSpeed = maxOutputSpeed;
 						}
-						lastSignal = vowel; //update previous signal
+						lastSignal = signal; //update previous signal
 						previousTime = currentTime; //Update previous time
 					} else{ //Vowel not valid, reset timer
 						outputSpeed = maxOutputSpeed;

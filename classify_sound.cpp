@@ -66,7 +66,7 @@ int main(int argc, char **argv, char **envp)
 	snd_pcm_t* capture_handle = init_audio(targetrate);
 	int dbThreashold = 152;
 	
-	double probthreashold = 0.001;  //Probability density function value threashold, to eliminate tails
+	double probthreashold = 0.01;  //Probability density function value threashold, to eliminate tails
 	FILE* rec_file = NULL;
 	snd_pcm_sframes_t frames; //signed long
 	int pipeStream[2];

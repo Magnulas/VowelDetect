@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#for d in `ls recordings/trainingdata`
+#	do
+#	rm formantdata/formant_data_$d
+#	touch formantdata/formant_data_$d
+#
+#	for f in `ls recordings/trainingdata/$d`
+#		do
+#		type=`echo $f | grep -o "[A-Za-z]\+[0-9]\+" | grep -o "[A-Za-z]\+"`
+#		
+#		echo -n "$type " >> formantdata/formant_data_$d
+#		praat formanter.praat recordings/trainingdata/$d/$f >> formantdata/formant_data_$d
+#		done
+#	done
+
+rm crossvalidate.output
+touch crossvalidate.output
+
+for testf in `ls formantdata | grep formant_data_Sp`
+	do
+	rm formantdata/formant_data
+	touch formantdata/formant_data
+	rm formantdata/formant_data_test
+	touch formantdata/formant_data_test
+
+	for f in `ls formantdata | grep formant_data_Sp | grep -v $testf`
+		do
+			cat formantdata/$f >> formantdata/formant_data
+		done
+	
+	cat formantdata/$testf > formantdata/formant_data_test
+
+	echo ------------------------ >> crossvalidate.output	
+	echo Test speaker $testf >> crossvalidate.output
+	./gmm_proccess_data
+	sh test.sh >> crossvalidate.output
+	echo ------------------------ >> crossvalidate.output	
+	done
+

@@ -1,6 +1,6 @@
 
 
-for nmix in 1 2 4 8
+for nmix in 1 2 4 8 
 	do
 	./itpp_gmm.out "gmm_data/A.data" "gmms/A.gmm" $nmix > train.output
 	./itpp_gmm.out "gmm_data/AO.data" "gmms/AO.gmm" $nmix >> train.output
