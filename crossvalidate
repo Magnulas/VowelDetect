@@ -14,6 +14,22 @@ for d in `ls recordings/trainingdata`
 		done
 	done
 
+
+
+rm formantdata/formant_data_test
+touch formantdata/formant_data_test
+rm formantdata/formant_data_noise
+touch formantdata/formant_data_noise
+
+for f in `ls recordings/testdata/noise`
+	do
+	type=`echo $f | grep -o "[A-Za-z]\+[0-9]\+" | grep -o "[A-Za-z]\+"`
+	
+	echo -n "$type " >> formantdata/formant_data_noise
+	praat formanter.praat recordings/testdata/noise/$f >>formantdata/formant_data_noise
+	done
+
+
 rm crossvalidate.output
 touch crossvalidate.output
 
@@ -24,17 +40,20 @@ for testf in `ls formantdata | grep formant_data_Sp`
 	rm formantdata/formant_data_test
 	touch formantdata/formant_data_test
 
-	for f in `ls formantdata | grep formant_data_Sp | grep -v $testf`
+	for f in `ls formantdata | grep -v $testf`
 		do
 			cat formantdata/$f >> formantdata/formant_data
 		done
 	
 	cat formantdata/$testf > formantdata/formant_data_test
+	cat formantdata/formant_data_noise >> formantdata/formant_data_test
 
 	echo ------------------------ >> crossvalidate.output	
 	echo Test speaker $testf >> crossvalidate.output
 	./gmm_proccess_data
+	echo Start $testf 1>&2
 	sh test.sh >> crossvalidate.output
+	echo Done $testf 1>&2
 	echo ------------------------ >> crossvalidate.output	
 	done
 

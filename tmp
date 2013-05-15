@@ -1,0 +1,356 @@
+Number of Mixtures: 1
+Treashold: 0
+Correct: 75.67% NSamples: 1200 Wrong: 292
+	A	AO	I	O	NOISE
+A	188	46	0	16	0
+AO	25	225	0	0	0
+I	0	0	250	0	0
+O	2	0	3	245	0
+NOISE	60	64	76	0	0
+Treashold: 0.01
+Correct: 91.25% NSamples: 1200 Wrong: 105
+	A	AO	I	O	NOISE
+A	188	46	0	16	0
+AO	25	225	0	0	0
+I	0	0	250	0	0
+O	2	0	3	245	0
+NOISE	0	0	13	0	187
+Treashold: 0.02
+Correct: 91.42% NSamples: 1200 Wrong: 103
+	A	AO	I	O	NOISE
+A	188	46	0	16	0
+AO	25	225	0	0	0
+I	0	0	249	0	1
+O	2	0	3	245	0
+NOISE	0	0	10	0	190
+Treashold: 0.03
+Correct: 91.42% NSamples: 1200 Wrong: 103
+	A	AO	I	O	NOISE
+A	188	46	0	16	0
+AO	25	225	0	0	0
+I	0	0	249	0	1
+O	2	0	3	245	0
+NOISE	0	0	10	0	190
+Treashold: 0.04
+Correct: 91.33% NSamples: 1200 Wrong: 104
+	A	AO	I	O	NOISE
+A	188	45	0	16	1
+AO	25	225	0	0	0
+I	0	0	249	0	1
+O	2	0	2	244	2
+NOISE	0	0	10	0	190
+Treashold: 0.05
+Correct: 91.33% NSamples: 1200 Wrong: 104
+	A	AO	I	O	NOISE
+A	188	45	0	16	1
+AO	25	225	0	0	0
+I	0	0	249	0	1
+O	2	0	2	244	2
+NOISE	0	0	10	0	190
+Treashold: 0.06
+Correct: 91.33% NSamples: 1200 Wrong: 104
+	A	AO	I	O	NOISE
+A	188	45	0	16	1
+AO	25	225	0	0	0
+I	0	0	249	0	1
+O	2	0	2	244	2
+NOISE	0	0	10	0	190
+Treashold: 0.07
+Correct: 91.33% NSamples: 1200 Wrong: 104
+	A	AO	I	O	NOISE
+A	188	45	0	16	1
+AO	25	225	0	0	0
+I	0	0	249	0	1
+O	2	0	2	244	2
+NOISE	0	0	10	0	190
+Treashold: 0.08
+Correct: 91.33% NSamples: 1200 Wrong: 104
+	A	AO	I	O	NOISE
+A	188	45	0	16	1
+AO	25	225	0	0	0
+I	0	0	249	0	1
+O	2	0	2	244	2
+NOISE	0	0	10	0	190
+Treashold: 0.09
+Correct: 91.25% NSamples: 1200 Wrong: 105
+	A	AO	I	O	NOISE
+A	188	45	0	16	1
+AO	25	225	0	0	0
+I	0	0	248	0	2
+O	2	0	2	244	2
+NOISE	0	0	10	0	190
+Treashold: 0.1
+Correct: 91.25% NSamples: 1200 Wrong: 105
+	A	AO	I	O	NOISE
+A	188	45	0	16	1
+AO	25	225	0	0	0
+I	0	0	248	0	2
+O	2	0	1	244	3
+NOISE	0	0	10	0	190
+Number of Mixtures: 2
+Treashold: 0
+Correct: 79.25% NSamples: 1200 Wrong: 249
+	A	AO	I	O	NOISE
+A	214	31	0	5	0
+AO	9	241	0	0	0
+I	0	0	250	0	0
+O	3	0	1	246	0
+NOISE	98	0	9	93	0
+Treashold: 0.01
+Correct: 95.25% NSamples: 1200 Wrong: 57
+	A	AO	I	O	NOISE
+A	214	31	0	5	0
+AO	9	241	0	0	0
+I	0	0	248	0	2
+O	3	0	0	246	1
+NOISE	0	0	6	0	194
+Treashold: 0.02
+Correct: 95.33% NSamples: 1200 Wrong: 56
+	A	AO	I	O	NOISE
+A	214	31	0	5	0
+AO	9	241	0	0	0
+I	0	0	248	0	2
+O	3	0	0	246	1
+NOISE	0	0	5	0	195
+Treashold: 0.03
+Correct: 95.25% NSamples: 1200 Wrong: 57
+	A	AO	I	O	NOISE
+A	214	31	0	5	0
+AO	9	241	0	0	0
+I	0	0	248	0	2
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.04
+Correct: 95.17% NSamples: 1200 Wrong: 58
+	A	AO	I	O	NOISE
+A	214	31	0	5	0
+AO	9	241	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.05
+Correct: 95.17% NSamples: 1200 Wrong: 58
+	A	AO	I	O	NOISE
+A	214	31	0	5	0
+AO	9	241	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.06
+Correct: 95.17% NSamples: 1200 Wrong: 58
+	A	AO	I	O	NOISE
+A	214	31	0	5	0
+AO	9	241	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.07
+Correct: 95.17% NSamples: 1200 Wrong: 58
+	A	AO	I	O	NOISE
+A	214	30	0	5	1
+AO	9	241	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.08
+Correct: 95.17% NSamples: 1200 Wrong: 58
+	A	AO	I	O	NOISE
+A	214	30	0	5	1
+AO	9	241	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.09
+Correct: 95.17% NSamples: 1200 Wrong: 58
+	A	AO	I	O	NOISE
+A	214	30	0	5	1
+AO	9	241	0	0	0
+I	0	0	246	0	4
+O	3	0	0	245	2
+NOISE	0	0	4	0	196
+Treashold: 0.1
+Correct: 95.17% NSamples: 1200 Wrong: 58
+	A	AO	I	O	NOISE
+A	214	30	0	5	1
+AO	9	241	0	0	0
+I	0	0	246	0	4
+O	3	0	0	245	2
+NOISE	0	0	4	0	196
+Number of Mixtures: 4
+Treashold: 0
+Correct: 80.33% NSamples: 1200 Wrong: 236
+	A	AO	I	O	NOISE
+A	231	12	0	7	0
+AO	14	236	0	0	0
+I	0	0	250	0	0
+O	3	0	0	247	0
+NOISE	0	44	12	144	0
+Treashold: 0.01
+Correct: 96.08% NSamples: 1200 Wrong: 47
+	A	AO	I	O	NOISE
+A	231	12	0	7	0
+AO	14	236	0	0	0
+I	0	0	248	0	2
+O	3	0	0	246	1
+NOISE	0	0	7	1	192
+Treashold: 0.02
+Correct: 96.08% NSamples: 1200 Wrong: 47
+	A	AO	I	O	NOISE
+A	230	12	0	7	1
+AO	14	236	0	0	0
+I	0	0	248	0	2
+O	3	0	0	245	2
+NOISE	0	0	6	0	194
+Treashold: 0.03
+Correct: 96.00% NSamples: 1200 Wrong: 48
+	A	AO	I	O	NOISE
+A	230	12	0	7	1
+AO	14	236	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	6	0	194
+Treashold: 0.04
+Correct: 96.00% NSamples: 1200 Wrong: 48
+	A	AO	I	O	NOISE
+A	230	12	0	7	1
+AO	14	236	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	6	0	194
+Treashold: 0.05
+Correct: 96.00% NSamples: 1200 Wrong: 48
+	A	AO	I	O	NOISE
+A	230	11	0	7	2
+AO	14	236	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	6	0	194
+Treashold: 0.06
+Correct: 96.08% NSamples: 1200 Wrong: 47
+	A	AO	I	O	NOISE
+A	230	11	0	7	2
+AO	14	236	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.07
+Correct: 96.08% NSamples: 1200 Wrong: 47
+	A	AO	I	O	NOISE
+A	230	11	0	7	2
+AO	14	236	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.08
+Correct: 96.08% NSamples: 1200 Wrong: 47
+	A	AO	I	O	NOISE
+A	230	11	0	7	2
+AO	14	236	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.09
+Correct: 96.08% NSamples: 1200 Wrong: 47
+	A	AO	I	O	NOISE
+A	230	11	0	7	2
+AO	14	236	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Treashold: 0.1
+Correct: 96.08% NSamples: 1200 Wrong: 47
+	A	AO	I	O	NOISE
+A	230	11	0	7	2
+AO	14	236	0	0	0
+I	0	0	247	0	3
+O	3	0	0	245	2
+NOISE	0	0	5	0	195
+Number of Mixtures: 8
+Treashold: 0
+Correct: 81.17% NSamples: 1200 Wrong: 226
+	A	AO	I	O	NOISE
+A	241	6	0	3	0
+AO	15	235	0	0	0
+I	0	0	250	0	0
+O	1	0	1	248	0
+NOISE	0	19	180	1	0
+Treashold: 0.01
+Correct: 95.92% NSamples: 1200 Wrong: 49
+	A	AO	I	O	NOISE
+A	241	6	0	3	0
+AO	15	235	0	0	0
+I	0	0	249	0	1
+O	1	0	1	248	0
+NOISE	0	0	22	0	178
+Treashold: 0.02
+Correct: 96.17% NSamples: 1200 Wrong: 46
+	A	AO	I	O	NOISE
+A	241	6	0	3	0
+AO	15	235	0	0	0
+I	0	0	249	0	1
+O	1	0	0	247	2
+NOISE	0	0	18	0	182
+Treashold: 0.03
+Correct: 96.50% NSamples: 1200 Wrong: 42
+	A	AO	I	O	NOISE
+A	241	6	0	3	0
+AO	15	235	0	0	0
+I	0	0	248	0	2
+O	1	0	0	247	2
+NOISE	0	0	13	0	187
+Treashold: 0.04
+Correct: 96.58% NSamples: 1200 Wrong: 41
+	A	AO	I	O	NOISE
+A	241	6	0	3	0
+AO	15	235	0	0	0
+I	0	0	248	0	2
+O	1	0	0	247	2
+NOISE	0	0	12	0	188
+Treashold: 0.05
+Correct: 96.67% NSamples: 1200 Wrong: 40
+	A	AO	I	O	NOISE
+A	241	6	0	3	0
+AO	15	235	0	0	0
+I	0	0	248	0	2
+O	1	0	0	247	2
+NOISE	0	0	11	0	189
+Treashold: 0.06
+Correct: 96.67% NSamples: 1200 Wrong: 40
+	A	AO	I	O	NOISE
+A	241	6	0	3	0
+AO	15	235	0	0	0
+I	0	0	248	0	2
+O	1	0	0	247	2
+NOISE	0	0	11	0	189
+Treashold: 0.07
+Correct: 96.67% NSamples: 1200 Wrong: 40
+	A	AO	I	O	NOISE
+A	241	6	0	3	0
+AO	15	235	0	0	0
+I	0	0	248	0	2
+O	1	0	0	247	2
+NOISE	0	0	11	0	189
+Treashold: 0.08
+Correct: 96.67% NSamples: 1200 Wrong: 40
+	A	AO	I	O	NOISE
+A	241	5	0	3	1
+AO	15	235	0	0	0
+I	0	0	248	0	2
+O	1	0	0	247	2
+NOISE	0	0	11	0	189
+Treashold: 0.09
+Correct: 96.67% NSamples: 1200 Wrong: 40
+	A	AO	I	O	NOISE
+A	241	5	0	3	1
+AO	15	235	0	0	0
+I	0	0	248	0	2
+O	1	0	0	247	2
+NOISE	0	0	11	0	189
+Treashold: 0.1
+Correct: 96.75% NSamples: 1200 Wrong: 39
+	A	AO	I	O	NOISE
+A	241	5	0	3	1
+AO	15	235	0	0	0
+I	0	0	248	0	2
+O	1	0	0	247	2
+NOISE	0	0	10	0	190

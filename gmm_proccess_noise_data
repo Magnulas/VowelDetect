@@ -1,0 +1,15 @@
+#!/bin/bash
+
+nLines=`cat formantdata/formant_data | wc -l`
+nWords=`cat formantdata/formant_data | wc -w`
+let nFormants=$nWords/$nLines
+let nFormants=$nFormants-1
+
+vowel=NOISE
+
+		nsamples=`grep ^"$vowel " formantdata/formant_data_test | wc -l`
+		touch gmm_data/"$vowel"_test.data
+		#echo n samples, nformants and output dim
+		echo "$nsamples $nFormants" >> gmm_data/"$vowel"_test.data
+
+		grep ^"$vowel " formantdata/formant_data_test | sed "s/$vowel //g" >> gmm_data/"$vowel"_test.data

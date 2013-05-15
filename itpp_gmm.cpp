@@ -56,7 +56,7 @@ int main(int argc, char **argv, char **envp)
 	//
 	// EM ML based optimisation
 	//100 iterations of EM
-	MOG_diag_ML(mog, X, 100, 0.0, 0.0, print_progress);
+	MOG_diag_ML(mog, X, 25, 0.0, 0.0, print_progress);
 	
 	cout << fixed << setprecision(3);
 	cout << "mog.get_means() = " << endl << mog.get_means() << endl;

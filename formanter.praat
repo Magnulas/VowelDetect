@@ -11,7 +11,7 @@ f1 = Get mean... 1 0 0 Hertz
 f2 = Get mean... 2 0 0 Hertz
 f3 = Get mean... 3 0 0 Hertz
 clearinfo
-f1small = f1/600
-f2small = f2/1000
-f3small = f3/3000
-print 'f1small' 'f2small' 'f3small''newline$'
+f1small = f1/500
+f2small = f2/1400
+f3small = f3/2800
+print 'f1small' 'f2small''newline$'

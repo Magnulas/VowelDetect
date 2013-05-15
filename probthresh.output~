@@ -1,0 +1,65 @@
+0.01
+Number of Mixtures: 1
+Correct: 91.58% NSamples: 1200 Wrong: 101
+	A	AO	I	O	NOISE
+A	202	34	0	14	0
+AO	37	213	0	0	0
+I	0	0	250	0	0
+O	4	0	1	244	1
+NOISE	0	0	10	0	190
+Number of Mixtures: 2
+Correct: 95.58% NSamples: 1200 Wrong: 53
+	A	AO	I	O	NOISE
+A	225	20	0	5	0
+AO	17	233	0	0	0
+I	0	0	247	0	3
+O	1	0	0	247	2
+NOISE	0	0	5	0	195
+Number of Mixtures: 4
+Correct: 96.58% NSamples: 1200 Wrong: 41
+	A	AO	I	O	NOISE
+A	236	9	0	5	0
+AO	15	235	0	0	0
+I	0	0	250	0	0
+O	2	0	0	247	1
+NOISE	0	0	9	0	191
+Number of Mixtures: 8
+Correct: 97.50% NSamples: 1200 Wrong: 30
+	A	AO	I	O	NOISE
+A	242	5	0	3	0
+AO	14	236	0	0	0
+I	0	0	250	0	0
+O	3	0	0	247	0
+NOISE	0	0	5	0	195
+Number of Mixtures: 1
+Correct: 91.50% NSamples: 1200 Wrong: 102
+	A	AO	I	O	NOISE
+A	201	32	0	14	3
+AO	37	213	0	0	0
+I	0	0	249	0	1
+O	4	0	1	242	3
+NOISE	0	0	7	0	193
+Number of Mixtures: 2
+Correct: 95.25% NSamples: 1200 Wrong: 57
+	A	AO	I	O	NOISE
+A	224	20	0	5	1
+AO	17	233	0	0	0
+I	0	0	244	0	6
+O	1	0	0	246	3
+NOISE	0	0	4	0	196
+Number of Mixtures: 4
+Correct: 97.00% NSamples: 1200 Wrong: 36
+	A	AO	I	O	NOISE
+A	236	9	0	5	0
+AO	15	235	0	0	0
+I	0	0	249	0	1
+O	2	0	0	246	2
+NOISE	0	0	2	0	198
+Number of Mixtures: 8
+Correct: 97.50% NSamples: 1200 Wrong: 30
+	A	AO	I	O	NOISE
+A	242	5	0	3	0
+AO	14	236	0	0	0
+I	0	0	249	0	1
+O	3	0	0	245	2
+NOISE	0	0	2	0	198
